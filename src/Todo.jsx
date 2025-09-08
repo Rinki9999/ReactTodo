@@ -12,7 +12,11 @@ import React, {useState} from 'react'
         setTodo("")
     }
     const deleteTask=(index)=>{
-        setTasks(tasks.filter((task , i)=>i!==index))
+        // setTasks(tasks.filter((task , i)=>i!==index))
+        let newArr=[...tasks]
+        newArr.splice(index , 1)
+        setTasks(newArr)
+
     }
     return(
         <>
